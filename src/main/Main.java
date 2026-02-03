@@ -41,10 +41,20 @@ public class Main {
         Scheduler scheduler = null;
 
         switch (choice) {
-            case 1 -> scheduler = new FCFS();
-            // case 2 -> scheduler = new SRTF();
-            // case 3 -> scheduler = new RR();
-            // case 4 -> scheduler = new NPP();
+            case 1:
+                scheduler = new FCFS();
+                break;
+            // case 2:
+                // scheduler = new SRTF();
+                // break;
+            // case 3:
+                // scheduler = new RR();
+                // break;
+            // case 4:
+                // scheduler = new NPP();
+                // break;
+            default:
+                break;
         }
 
         if (scheduler != null) {
