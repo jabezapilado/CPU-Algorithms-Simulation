@@ -23,7 +23,7 @@ public class RR implements Scheduler {
         int index = 0;
         
         while (index < processes.size() || !queue.isEmpty()) {
-            // Add all processes that have arrived at current time
+            // Add all processes that have arrived at the current time slice
             while (index < processes.size() && processes.get(index).arrivalTime <= time) {
                 queue.add(processes.get(index));
                 index++;
@@ -39,9 +39,9 @@ public class RR implements Scheduler {
             } else {
                 // Execute process for time quantum or remaining burst time
                 Process p = queue.poll();
-                int executeTime = Math.min(timeQuantum, p.burstTime);
+                int executeTime = Math.min(timeQuantum, p.remainingTime);
                 time += executeTime;
-                p.burstTime -= executeTime;
+                p.remainingTime -= executeTime;
                 
                 // Add newly arrived processes during execution
                 while (index < processes.size() && processes.get(index).arrivalTime <= time) {
@@ -49,13 +49,13 @@ public class RR implements Scheduler {
                     index++;
                 }
                 
-                if (p.burstTime > 0) {
+                if (p.remainingTime > 0) {
                     // Process not finished, add back to queue
                     queue.add(p);
                 } else {
                     // Process finished
                     p.turnaroundTime = time - p.arrivalTime;
-                    p.waitingTime = p.turnaroundTime - p.burstTime - executeTime;
+                    p.waitingTime = p.turnaroundTime - p.burstTime;
                 }
             }
         }

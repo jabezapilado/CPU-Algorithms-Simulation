@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 import main.algorithms.FCFS;
+import main.algorithms.NPP;
+import main.algorithms.RR;
+import main.algorithms.SRTF;
 
 public class Main {
 
@@ -31,31 +34,7 @@ public class Main {
             processes.add(new Process(i + 1, at, bt, pr));
         }
 
-        System.out.println("\nChoose Algorithm:");
-        System.out.println("1 - FCFS");
-        System.out.println("2 - SRTF");
-        System.out.println("3 - Round Robin");
-        System.out.println("4 - Non-preemptive Priority");
-
-        int choice = scanner.nextInt();
-        Scheduler scheduler = null;
-
-        switch (choice) {
-            case 1:
-                scheduler = new FCFS();
-                break;
-            // case 2:
-                // scheduler = new SRTF();
-                // break;
-            // case 3:
-                // scheduler = new RR();
-                // break;
-            // case 4:
-                // scheduler = new NPP();
-                // break;
-            default:
-                break;
-        }
+        Scheduler scheduler = selectScheduler(scanner);
 
         if (scheduler != null) {
             List<Process> scheduled = cloneList(processes);
@@ -64,10 +43,36 @@ public class Main {
         }
     }
 
+    static Scheduler selectScheduler(Scanner scanner) {
+        System.out.println("\nChoose Algorithm:");
+        System.out.println("1 - FCFS");
+        System.out.println("2 - SRTF");
+        System.out.println("3 - Round Robin");
+        System.out.println("4 - Non-preemptive Priority");
+
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                return new FCFS();
+            case 2:
+                return new SRTF();
+            case 3:
+                System.out.print("Enter Time Quantum: ");
+                int quantum = scanner.nextInt();
+                return new RR(quantum);
+            case 4:
+                return new NPP();
+            default:
+                System.out.println("Invalid choice. No scheduling performed.");
+                return null;
+        }
+    }
+
     static List<Process> cloneList(List<Process> original) {
         List<Process> copy = new ArrayList<>();
         for (Process p : original) {
-            copy.add(new Process(p.pid, p.arrivalTime, p.burstTime, p.priority));
+            copy.add(p.copy());
         }
         return copy;
     }

@@ -18,4 +18,8 @@ public class Process {
         this.priority = priority;
         this.remainingTime = burstTime;
     }
+
+    public Process copy() {
+        return new Process(pid, arrivalTime, burstTime, priority);
+    }
 }
