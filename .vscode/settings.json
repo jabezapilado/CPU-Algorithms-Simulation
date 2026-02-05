@@ -1,0 +1,10 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python - <<'PY'\nfrom PIL import Image\nimg = Image\\.open\\('/workspaces/CPU-Algorithms-Simulation/\\.attachments/attachment-0\\.jpg'\\)\nimg = img\\.resize\\(\\(img\\.width\\*3, img\\.height\\*3\\)\\)\nimg\\.save\\('/workspaces/CPU-Algorithms-Simulation/tmp_scaled\\.png'\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "pip": true,
+        "env": true
+    }
+}

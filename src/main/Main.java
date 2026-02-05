@@ -44,13 +44,13 @@ public class Main {
     }
 
     static Scheduler selectScheduler(Scanner scanner) {
-        System.out.println("\nChoose Algorithm:");
+        System.out.println("\nAlgorithms:");
         System.out.println("1 - FCFS");
         System.out.println("2 - SRTF");
         System.out.println("3 - Round Robin");
         System.out.println("4 - Non-preemptive Priority");
 
-        int choice = scanner.nextInt();
+        System.out.print("\nChoose Algorithm: "); int choice = scanner.nextInt();
 
         switch (choice) {
             case 1:
@@ -58,7 +58,7 @@ public class Main {
             case 2:
                 return new SRTF();
             case 3:
-                System.out.print("Enter Time Quantum: ");
+                System.out.print("Enter Time Quantum (ms): ");
                 int quantum = scanner.nextInt();
                 return new RR(quantum);
             case 4:
@@ -78,12 +78,69 @@ public class Main {
     }
 
     static void printResults(List<Process> processes) {
-        System.out.println("\nPID | AT | BT | PR | WT | TAT");
+        processes.sort((a, b) -> Integer.compare(a.pid, b.pid));
+
+        String[] headers = {"PID", "AT", "BT", "PR", "S", "E", "TAT", "WT"};
+        int columns = headers.length;
+        int[] widths = new int[columns];
+        for (int i = 0; i < columns; i++) {
+            widths[i] = headers[i].length();
+        }
+
+        List<String[]> rows = new ArrayList<>();
+
+        int totalWT = 0;
+        int totalTAT = 0;
 
         for (Process p : processes) {
-            System.out.printf("P%d | %d | %d | %d | %d | %d\n",
-                    p.pid, p.arrivalTime, p.burstTime,
-                    p.priority, p.waitingTime, p.turnaroundTime);
+            String pid = "P" + p.pid;
+            String at = Integer.toString(p.arrivalTime);
+            String bt = Integer.toString(p.burstTime);
+            String pr = Integer.toString(p.priority);
+            String start = p.startTime < 0 ? "-" : Integer.toString(p.startTime);
+            String end = p.completionTime == 0 ? "-" : Integer.toString(p.completionTime);
+            String tat = Integer.toString(p.turnaroundTime);
+            String wt = Integer.toString(p.waitingTime);
+
+            String[] row = {pid, at, bt, pr, start, end, tat, wt};
+            rows.add(row);
+
+            for (int i = 0; i < columns; i++) {
+                widths[i] = Math.max(widths[i], row[i].length());
+            }
+
+            totalWT += p.waitingTime;
+            totalTAT += p.turnaroundTime;
         }
+
+        StringBuilder formatBuilder = new StringBuilder();
+        for (int i = 0; i < columns; i++) {
+            formatBuilder.append("%").append(widths[i]).append("s");
+            if (i < columns - 1) {
+                formatBuilder.append(" | ");
+            }
+        }
+        formatBuilder.append("\n");
+        String rowFormat = formatBuilder.toString();
+
+        int lineLength = 0;
+        for (int width : widths) {
+            lineLength += width;
+        }
+        lineLength += (columns - 1) * 3;
+        String separator = "-".repeat(lineLength);
+
+        System.out.println();
+        System.out.printf(rowFormat, (Object[]) headers);
+        System.out.println(separator);
+        for (String[] row : rows) {
+            System.out.printf(rowFormat, (Object[]) row);
+        }
+
+        double avgWT = processes.isEmpty() ? 0 : (double) totalWT / processes.size();
+        double avgTAT = processes.isEmpty() ? 0 : (double) totalTAT / processes.size();
+
+        System.out.printf("Average TAT: %.2f\n", avgTAT);
+        System.out.printf("Average WT: %.2f\n", avgWT);
     }
 }

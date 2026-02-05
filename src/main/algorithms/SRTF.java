@@ -36,6 +36,10 @@ public class SRTF implements Scheduler {
                 continue;
             }
 
+            if (current.startTime < 0) {
+                current.startTime = time;
+            }
+
             current.remainingTime--;
             time++;
 
@@ -43,6 +47,7 @@ public class SRTF implements Scheduler {
                 completed++;
                 current.turnaroundTime = time - current.arrivalTime;
                 current.waitingTime = current.turnaroundTime - current.burstTime;
+                current.completionTime = time;
             }
         }
     }

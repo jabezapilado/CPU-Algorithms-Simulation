@@ -39,6 +39,9 @@ public class RR implements Scheduler {
             } else {
                 // Execute process for time quantum or remaining burst time
                 Process p = queue.poll();
+                if (p.startTime < 0) {
+                    p.startTime = time;
+                }
                 int executeTime = Math.min(timeQuantum, p.remainingTime);
                 time += executeTime;
                 p.remainingTime -= executeTime;
@@ -56,6 +59,7 @@ public class RR implements Scheduler {
                     // Process finished
                     p.turnaroundTime = time - p.arrivalTime;
                     p.waitingTime = p.turnaroundTime - p.burstTime;
+                    p.completionTime = time;
                 }
             }
         }

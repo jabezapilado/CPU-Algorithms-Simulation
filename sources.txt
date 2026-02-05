@@ -1,0 +1,7 @@
+src/main/algorithms/FCFS.java
+src/main/algorithms/SRTF.java
+src/main/algorithms/NPP.java
+src/main/algorithms/RR.java
+src/main/Main.java
+src/main/Process.java
+src/main/Scheduler.java
