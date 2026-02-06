@@ -1,5 +1,6 @@
 # Build outputs
 bin/
+out/
 *.class
 *.log
 .DS_Store

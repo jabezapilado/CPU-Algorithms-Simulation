@@ -58,8 +58,7 @@ public class Main {
             case 2:
                 return new SRTF();
             case 3:
-                System.out.print("Enter Time Quantum (ms): ");
-                int quantum = scanner.nextInt();
+                int quantum = readPositiveQuantum(scanner);
                 return new RR(quantum);
             case 4:
                 return new NPP();
@@ -142,5 +141,17 @@ public class Main {
 
         System.out.printf("Average TAT: %.2f\n", avgTAT);
         System.out.printf("Average WT: %.2f\n", avgWT);
+    }
+
+    private static int readPositiveQuantum(Scanner scanner) {
+        int quantum;
+        do {
+            System.out.print("Enter Time Quantum (ms > 0): ");
+            quantum = scanner.nextInt();
+            if (quantum <= 0) {
+                System.out.println("Time quantum must be greater than 0. Please try again.");
+            }
+        } while (quantum <= 0);
+        return quantum;
     }
 }
