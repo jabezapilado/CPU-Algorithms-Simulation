@@ -97,6 +97,24 @@ Average WT: 3.00
 - Results table sorts by PID and gracefully handles processes that have not yet started or completed.
 - Average TAT and WT are displayed below the table for quick comparison across algorithms.
 
+### Sample Web UI Session
+
+1. Start the dev server with `npm run dev` and open the provided URL.
+2. Add three processes through the panel: `(AT 0, BT 5, PR 1)`, `(AT 2, BT 3, PR 2)`, `(AT 4, BT 4, PR 3)`.
+3. Select **Round Robin**, set the quantum to `2`, then press **Run**.
+4. Review the rendered table and averages, similar to:
+
+```
+ PID | AT | BT | PR | Start | End | TAT | WT
+-----|----|----|----|-------|-----|-----|----
+ P1  |  0 |  5 |  1 |     0 |   9 |   9 |  4
+ P2  |  2 |  3 |  2 |     2 |   8 |   6 |  3
+ P3  |  4 |  4 |  3 |     6 |  12 |   8 |  4
+
+Avg TAT: 7.67
+Avg WT: 3.67
+```
+
 ## Project Structure
 
 ```
