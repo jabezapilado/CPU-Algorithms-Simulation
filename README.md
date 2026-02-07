@@ -144,6 +144,14 @@ CPU-Algorithms-Simulation/
 - Gurango, Christine Francoise O. — React interface (front end)
 - Quilantang, Grant Mihkael D. — React interface (front end)
 
+## References
+
+- GeeksforGeeks. "CPU Scheduling Algorithms." [geeksforgeeks.org/cpu-scheduling-algorithms](https://www.geeksforgeeks.org/cpu-scheduling-algorithms/)
+- TutorialsPoint. "Operating System - Process Scheduling." [tutorialspoint.com/operating_system/os_process_scheduling.htm](https://www.tutorialspoint.com/operating_system/os_process_scheduling.htm)
+- IBM Documentation. "Process scheduling." [ibm.com/docs/en/aix/7.3?topic=scheduling-process](https://www.ibm.com/docs/en/aix/7.3?topic=scheduling-process)
+- StudyTonight. "Scheduling Algorithms in Operating System." [studytonight.com/operating-system/scheduling-algorithms](https://www.studytonight.com/operating-system/scheduling-algorithms)
+- Javatpoint. "CPU Scheduling in Operating System." [javatpoint.com/os-cpu-scheduling](https://www.javatpoint.com/os-cpu-scheduling)
+
 ## License
 
 This project is released for educational use. Apply additional licensing as needed before redistribution.
