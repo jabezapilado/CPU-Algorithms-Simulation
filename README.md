@@ -146,11 +146,18 @@ CPU-Algorithms-Simulation/
 
 ## References
 
-- GeeksforGeeks. "CPU Scheduling Algorithms." [geeksforgeeks.org/cpu-scheduling-algorithms](https://www.geeksforgeeks.org/cpu-scheduling-algorithms/)
-- TutorialsPoint. "Operating System - Process Scheduling." [tutorialspoint.com/operating_system/os_process_scheduling.htm](https://www.tutorialspoint.com/operating_system/os_process_scheduling.htm)
-- IBM Documentation. "Process scheduling." [ibm.com/docs/en/aix/7.3?topic=scheduling-process](https://www.ibm.com/docs/en/aix/7.3?topic=scheduling-process)
-- StudyTonight. "Scheduling Algorithms in Operating System." [studytonight.com/operating-system/scheduling-algorithms](https://www.studytonight.com/operating-system/scheduling-algorithms)
-- Javatpoint. "CPU Scheduling in Operating System." [javatpoint.com/os-cpu-scheduling](https://www.javatpoint.com/os-cpu-scheduling)
+- **Backend**
+	- GeeksforGeeks. "CPU Scheduling Algorithms." [geeksforgeeks.org/cpu-scheduling-algorithms](https://www.geeksforgeeks.org/cpu-scheduling-algorithms/)
+	- TutorialsPoint. "Operating System - Process Scheduling." [tutorialspoint.com/operating_system/os_process_scheduling.htm](https://www.tutorialspoint.com/operating_system/os_process_scheduling.htm)
+	- IBM Documentation. "Process scheduling." [ibm.com/docs/en/aix/7.3?topic=scheduling-process](https://www.ibm.com/docs/en/aix/7.3?topic=scheduling-process)
+	- StudyTonight. "Scheduling Algorithms in Operating System." [studytonight.com/operating-system/scheduling-algorithms](https://www.studytonight.com/operating-system/scheduling-algorithms)
+	- Javatpoint. "CPU Scheduling in Operating System." [javatpoint.com/os-cpu-scheduling](https://www.javatpoint.com/os-cpu-scheduling)
+- **Frontend**
+	- React Documentation. "Quick Start." [react.dev/learn](https://react.dev/learn)
+	- Vite. "Getting Started." [vitejs.dev/guide](https://vitejs.dev/guide/)
+	- MDN Web Docs. "Flexible Box Layout." [developer.mozilla.org/docs/Web/CSS/CSS_flexible_box_layout](https://developer.mozilla.org/docs/Web/CSS/CSS_flexible_box_layout)
+	- CSS-Tricks. "A Complete Guide to CSS Modules." [css-tricks.com/css-modules-part-1-need](https://css-tricks.com/css-modules-part-1-need/)
+	- TanStack Table (formerly react-table). "Table Examples." [tanstack.com/table/latest/docs/examples/react/basic](https://tanstack.com/table/latest/docs/examples/react/basic)
 
 ## License
 
