@@ -147,17 +147,23 @@ CPU-Algorithms-Simulation/
 ## References
 
 - **Backend**
-	- GeeksforGeeks. "CPU Scheduling Algorithms." [geeksforgeeks.org/cpu-scheduling-algorithms](https://www.geeksforgeeks.org/cpu-scheduling-algorithms/)
-	- TutorialsPoint. "Operating System - Process Scheduling." [tutorialspoint.com/operating_system/os_process_scheduling.htm](https://www.tutorialspoint.com/operating_system/os_process_scheduling.htm)
-	- IBM Documentation. "Process scheduling." [ibm.com/docs/en/aix/7.3?topic=scheduling-process](https://www.ibm.com/docs/en/aix/7.3?topic=scheduling-process)
-	- StudyTonight. "Scheduling Algorithms in Operating System." [studytonight.com/operating-system/scheduling-algorithms](https://www.studytonight.com/operating-system/scheduling-algorithms)
-	- Javatpoint. "CPU Scheduling in Operating System." [javatpoint.com/os-cpu-scheduling](https://www.javatpoint.com/os-cpu-scheduling)
+	- GeeksforGeeks. (2020, March 18). FCFS First Come First Serve CPU Scheduling. GeeksforGeeks. [geeksforgeeks.org/dsa/first-come-first-serve-cpu-scheduling-non-preemptive](https://www.geeksforgeeks.org/dsa/first-come-first-serve-cpu-scheduling-non-preemptive/)
+	- GeeksforGeeks. (2025, January 13). Priority Scheduling in Operating System. GeeksforGeeks. [geeksforgeeks.org/operating-systems/priority-scheduling-in-operating-system](https://www.geeksforgeeks.org/operating-systems/priority-scheduling-in-operating-system/)
+	- GeeksforGeeks. (2026, January 5). Shortest remaining time first (Preemptive SJF) scheduling algorithm. GeeksforGeeks. [geeksforgeeks.org/dsa/shortest-remaining-time-first-preemptive-sjf-scheduling-algorithm](https://www.geeksforgeeks.org/dsa/shortest-remaining-time-first-preemptive-sjf-scheduling-algorithm/)
+	- GeeksforGeeks. (2026b, January 6). Round Robin scheduling in operating system. GeeksforGeeks. [geeksforgeeks.org/operating-systems/round-robin-scheduling-in-operating-system](https://www.geeksforgeeks.org/operating-systems/round-robin-scheduling-in-operating-system/)
+	- GeeksforGeeks. (2018, November 13). Preemptive and NonPreemptive Scheduling. GeeksforGeeks. [geeksforgeeks.org/operating-systems/preemptive-and-non-preemptive-scheduling](https://www.geeksforgeeks.org/operating-systems/preemptive-and-non-preemptive-scheduling/)
+	- GeeksforGeeks. (2023, January 17). Spooling in Operating System. GeeksforGeeks. [geeksforgeeks.org/operating-systems/spooling-in-operating-system](https://www.geeksforgeeks.org/operating-systems/spooling-in-operating-system/)
+	- Operating Systems: CPU Scheduling. (2026). Uic.edu. [cs.uic.edu/~jbell/CourseNotes/OperatingSystems/5_CPU_Scheduling.html](https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/5_CPU_Scheduling.html)
+	- Short, M. (2010). The Case For Non-preemptive, Deadline-driven Scheduling In Real-time Embedded Systems. IAENG International Journal of Computer Science, 1(1). [researchgate.net/publication/45534417_The_Case_For_Non-preemptive_Deadline-driven_Scheduling_In_Real-time_Embedded_Systems](https://www.researchgate.net/publication/45534417_The_Case_For_Non-preemptive_Deadline-driven_Scheduling_In_Real-time_Embedded_Systems)
+	- sched(7) - Linux manual page. (2026). Man7.org. [man7.org/linux/man-pages/man7/sched.7.html](https://man7.org/linux/man-pages/man7/sched.7.html)
+	- CFS Scheduler — The Linux Kernel documentation. (n.d.). [docs.kernel.org/scheduler/sched-design-CFS.html](https://docs.kernel.org/scheduler/sched-design-CFS.html)
+	- Harchol-Balter, M., Schroeder, B., Bansal, N., & Agrawal, M. (2003). Size-based scheduling to improve web performance. ACM Transactions on Computer Systems, 21(2), 207–233. [doi.org/10.1145/762483.762486](https://doi.org/10.1145/762483.762486)
+
 - **Frontend**
-	- React Documentation. "Quick Start." [react.dev/learn](https://react.dev/learn)
-	- Vite. "Getting Started." [vitejs.dev/guide](https://vitejs.dev/guide/)
-	- MDN Web Docs. "Flexible Box Layout." [developer.mozilla.org/docs/Web/CSS/CSS_flexible_box_layout](https://developer.mozilla.org/docs/Web/CSS/CSS_flexible_box_layout)
-	- CSS-Tricks. "A Complete Guide to CSS Modules." [css-tricks.com/css-modules-part-1-need](https://css-tricks.com/css-modules-part-1-need/)
-	- TanStack Table (formerly react-table). "Table Examples." [tanstack.com/table/latest/docs/examples/react/basic](https://tanstack.com/table/latest/docs/examples/react/basic)
+	- DeepSeek. (n.d.). DeepSeek. [deepseek.com](https://www.deepseek.com/)
+	- Vitejs. (n.d.). GitHub - vitejs/vite-plugin-react: The all-in-one Vite plugin for React projects. GitHub. [github.com/vitejs/vite-plugin-react](https://github.com/vitejs/vite-plugin-react)
+	- Css-Modules. (n.d.). GitHub - css-modules/css-modules: Documentation about css-modules. GitHub. [github.com/css-modules/css-modules](https://github.com/css-modules/css-modules)
+	- Using CSS custom properties (variables) - CSS | MDN. (2025, December 16). [developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 
 ## License
 
